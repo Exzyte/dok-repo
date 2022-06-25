@@ -1,8 +1,8 @@
-# Homeworld: Deserts of Kharak - GE Mod Repository
+# Homeworld: Deserts of Kharak - GE Mod Repository (Forked Version.)
 
 ## Installation Instructions
 
-Download: https://github.com/AGameAnx/dok-ge-mod/releases
+Official Download: https://github.com/AGameAnx/dok-ge-mod/releases
 
 Extract the downloaded file to:
 
