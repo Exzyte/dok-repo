@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.05.13",
-        "LastUpdate": "2022-06-20",
+        "Version": "1.06.01",
+        "LastUpdate": "2022-07-13",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
     },
     /*"Global": {
@@ -66,8 +66,9 @@
                 //"Resource2Cost": 0,
                 //"ResearchTime": 0,
 
-                "Resource1Cost": 200,
-                "Resource2Cost": 100,
+                "Resource1Cost": 150,
+                "Resource2Cost": 50,
+                "ResearchTime": 15,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 150 hitpoints and 1 extra power to the carrier reserves",
@@ -93,8 +94,8 @@
                 //"Resource2Cost": 0,
                 // "ResearchTime": 0,
 
-                "Resource1Cost": 400,
-                "Resource2Cost": 175,
+                "Resource1Cost": 300,
+                "Resource2Cost": 150,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 250 hitpoints and 2 extra power to the carrier reserves",
@@ -175,7 +176,7 @@
                 //"ResearchTime": 0,
 
                 "Resource1Cost": 1200,
-                "Resource2Cost": 550,
+                "Resource2Cost": 650,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 1000 hitpoints and 5 extra power to the carrier reserves, unlock the Super-Sonic Missile barrage",
@@ -277,9 +278,9 @@
                 //"Resource1Cost": 0,
                 //"Resource2Cost": 0,
                 //"ResearchTime": 0,
-
-                "Resource1Cost": 200,
-                "Resource2Cost": 100,
+                "Resource1Cost": 150,
+                "Resource2Cost": 50,
+                "ResearchTime": 15,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 150 hitpoints and 1 extra power to the carrier reserves",
@@ -307,8 +308,8 @@
                 //"Resource2Cost": 0,
                 //"ResearchTime": 0,
 
-                "Resource1Cost": 600,
-                "Resource2Cost": 300,
+                "Resource1Cost": 550,
+                "Resource2Cost": 250,
                 "LocalizedResearchTitleStringID": "CARRIER MOBILITY",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier mobility",
                 "LocalizedLongDescriptionStringID": "Adds 30 extra max speed and 2 extra power to the carrier reserves",
@@ -389,7 +390,7 @@
                 //"Resource2Cost": 0,
                 //"ResearchTime": 0,
                 "Resource1Cost": 1200,
-                "Resource2Cost": 550,
+                "Resource2Cost": 650,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 750 hitpoints and 5 extra power to the carrier reserves, unlock the Cruise Missile",
@@ -475,8 +476,9 @@
         // SOBAN POWER UPGRADES
         "Research_S_Buff_Power_1": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 200,
-                "Resource2Cost": 100,
+                "Resource1Cost": 150,
+                "Resource2Cost": 50,
+                "ResearchTime": 15,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 1 extra power to the carrier reserves, but removes 150 hull integrity",
@@ -499,8 +501,8 @@
         // Carrier Mobility Upgrade
         "Research_S_Buff_Power_2": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 600,
-                "Resource2Cost": 300,
+                "Resource1Cost": 550,
+                "Resource2Cost": 250,
                 "LocalizedResearchTitleStringID": "CARRIER MOBILITY",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier mobility",
                 "LocalizedLongDescriptionStringID": "Adds 30 extra max speed and 2 extra power to the carrier reserves",
@@ -719,6 +721,11 @@
                 "LocalizedLongDescriptionStringID": "[84a1e8]WHAT DO YOU MEAN WE MISSING ONE RU???."
             }
         },
+        /*"Buffset_C_EMP_Rachel_StatusEffect": {
+            "StatusEffectAttributes": {
+                "Duration": 15                
+            }
+        },*/
         // COALITION CARRIER
         "C_Carrier_MP": {
             //"ExperienceAttributes": { // alas can't be done, needs to have experience attributes already or it can't be created
@@ -804,7 +811,11 @@
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 30,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 3,
+                    "RateOfFire": 15,
+                    "ReloadTimeMS": 2350,
+                    "CooldownTimeMS": 1550,
+                    "BurstPeriodMinTimeMS": 200,
+                    "BurstPeriodMaxTimeMS": 300,
                     "TargetStyle": "Flak",
                     "RangeAttributesShort": {
 
@@ -858,9 +869,13 @@
                 "C_Carrier_Weapon_G2All_PenetrationShots_MP": { // Are these even used at all?? //yes, and you did it wrong dumbass
                     "LineOfSightRequired": false,
                     "TracerLength": 5,
+                    "ReloadTimeMS": 2350,
+                    "CooldownTimeMS": 1550,
+                    "BurstPeriodMinTimeMS": 200,
+                    "BurstPeriodMaxTimeMS": 300,
                     "BaseDamagePerRound": 30,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 3,
+                    "RateOfFire": 15,
                     "TargetStyle": "Flak",
                     "RangeAttributesShort": {
                         "Remove": true
@@ -943,6 +958,14 @@
                     "AreaOfEffectRadius": 1000,
                     "DamagePacketsPerShot": 10,
                     "AreaOfEffectFalloffType": "Linear",
+                    /*"ActiveStatusEffectsIndex": 1,
+                    "StatusEffectsTargetAlignment": "Foe",
+                    "StatusEffectsExcludeTargetType": 0,
+                    "StatusEffectsSets": {
+                        "0": {
+                            "StatusEffects": [ "Buffset_C_EMP_Rachel_StatusEffect" ]
+                        }
+                    },*/
                     "ExcludeFromHeightAdvantage": true,
                     "Modifiers": {
                         "0": {
@@ -1110,43 +1133,43 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }
                                                 }
                                             }
@@ -1204,43 +1227,43 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }
                                                 }
                                             }
@@ -1298,43 +1321,43 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }
                                                 }
                                             }
@@ -1392,43 +1415,43 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }
                                                 }
                                             }
@@ -1486,44 +1509,44 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BR_APBULLETS
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BL_APBULLETS
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FL_APBULLETS
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FR_APBULLETS
                                                     "5": { "Value": 20 }, // Fire rate display
                                                     "6": {
                                                         "Name": "TURRET_FR",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }
                                                 }
                                             }
@@ -1680,7 +1703,7 @@
                     },
 
                     "3": { // Range Systems
-                        "PowerLevels": { // Remove all short range systems because that will cause infinite range due to heal beam bug
+                        "PowerLevels": { // Remove all short range systems because that will cause infinite range due to heal beam bug // you dumbass should point subsystem a name of a weapon
 
                             // ==================================================== //
                             // For each turret:                                     //
@@ -2061,6 +2084,7 @@
                         "QueuedAbilityDelay": 1.5
                     }
                 },
+                "Ability_C_Sob_ProduceSupportCruiser_MP": { "ProduceUnit": { "UnitTypeToProduce": "C_SupportCruiser_MP" } },
                 "Ability_C_LaunchInterceptor_MP": {
                     "AirSortie": {
                         "LoiterLength": 40,
@@ -3698,8 +3722,12 @@
                 "G_Carrier_Weapon_G2All_MP": {
                     "BaseDamagePerRound": 30,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 3,
+                    "RateOfFire": 15,
                     "TargetStyle": "Flak",
+                    "ReloadTimeMS": 2350,
+                    "CooldownTimeMS": 1550,
+                    "BurstPeriodMinTimeMS": 200,
+                    "BurstPeriodMaxTimeMS": 300,
                     "RangeAttributesShort": {
                         "Distance": 400,
                         "Accuracy": 50
@@ -3753,8 +3781,12 @@
                     "BaseDamagePerRound": 30,
                     "LineOfSightRequired": false,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 3,
+                    "RateOfFire": 15,
                     "TargetStyle": "Flak",
+                    "BurstPeriodMinTimeMS": 200,
+                    "BurstPeriodMaxTimeMS": 300,
+                    "ReloadTimeMS": 2350,
+                    "CooldownTimeMS": 1550,
                     "RangeAttributesShort": {
                         "Distance": 400,
                         "Accuracy": 50
@@ -4044,43 +4076,43 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     },
                                                     "10": {
                                                         "Value": 125,
@@ -4141,43 +4173,43 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     },
                                                     "10": {
                                                         "Value": 250,
@@ -4238,43 +4270,43 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     },
                                                     "10": {
                                                         "Value": 375,
@@ -4335,43 +4367,43 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "10": {
                                                         "Value": 500,
@@ -4455,46 +4487,46 @@
                                                     "1": {
                                                         "Name": "TURRET_FR",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Name": "TURRET_FL",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Name": "TURRET_BR",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Name": "TURRET_BL",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }
 
                                                 }
@@ -5049,7 +5081,7 @@
                 }
             },
             "WeaponAttributes": {
-                //"G_Carrier_Weapon_EMP_MP": {
+                //"G_Carrier_Weapon_EMP_MP": { // no touchy!
                 //    "ExcludeFromAutoTargetAcquisition": true,
                 //    "ExcludeFromAutoFire": true,
                 //    "LineOfSightRequired": false,
@@ -5083,14 +5115,21 @@
                 //        "FieldOfView": 360,
                 //        "FieldOfFire": 360
                 //    }
-                //},
+                //}, // no touchy!
                 "G_Carrier_Weapon_G2All_Dummy_MP": {
                     "BaseDamagePerRound": 30
                 },
+                "K_Carrier_WeaponMovementBuff_G2G_MP": {
+                    "ProjectileEntityTypeToSpawn": "K_MovementBuff_CruiserShell_ProjectileAssetContainer_MP"
+                },
                 "K_Carrier_Weapon_G2All_MP": {
                     "BaseDamagePerRound": 30,
+                    "ReloadTimeMS": 2350,
+                    "CooldownTimeMS": 1550,
+                    "BurstPeriodMinTimeMS": 200,
+                    "BurstPeriodMaxTimeMS": 300,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 3,
+                    "RateOfFire": 15,
                     "TargetStyle": "Flak",
                     "RangeAttributesShort": {
                         "Distance": 600,
@@ -5147,8 +5186,12 @@
                     "BaseDamagePerRound": 30,
                     "LineOfSightRequired": false,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 3,
+                    "RateOfFire": 15,
                     "TargetStyle": "Flak",
+                    "ReloadTimeMS": 2350,
+                    "CooldownTimeMS": 1550,
+                    "BurstPeriodMinTimeMS": 200,
+                    "BurstPeriodMaxTimeMS": 300,
                     "RangeAttributesShort": {
                         "Distance": 350,
                         "Accuracy": 50
@@ -5222,7 +5265,7 @@
                         "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "MinDistance": 350, // don't gib urself
+                        "MinDistance": 350, // don't gib urself, still gib urself
                         "Distance": 1650
                     },
                     "ExcludeFromHeightAdvantage": true
@@ -5842,19 +5885,19 @@
                                                 "BuffSet": {
                                                     "0": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
@@ -5864,25 +5907,25 @@
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 5
+                                                        "Value": 25
                                                     }
                                                 }
                                             }
@@ -5934,19 +5977,19 @@
                                                 "BuffSet": {
                                                     "0": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
@@ -5956,25 +5999,25 @@
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 7
+                                                        "Value": 35
                                                     }
                                                 }
                                             }
@@ -6027,19 +6070,19 @@
                                                 "BuffSet": {
                                                     "0": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
@@ -6049,25 +6092,25 @@
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 12
+                                                        "Value": 60
                                                     }
                                                 }
                                             }
@@ -6120,19 +6163,19 @@
                                                 "BuffSet": {
                                                     "0": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
@@ -6142,25 +6185,25 @@
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }
                                                 }
                                             }
@@ -6215,20 +6258,28 @@
                                             "0": {
                                                 "BuffSet": {
                                                     "0": {
+                                                        "Name": "TURRET_FR",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BR
                                                     "1": {
+                                                        "Name": "TURRET_FL",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_BL
                                                     "2": {
+                                                        "Name": "TURRET_BR",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FL
                                                     "3": {
+                                                        "Name": "TURRET_BL",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
@@ -6238,25 +6289,25 @@
                                                         "Name": "TURRET_FR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 100
                                                     }
                                                 }
                                             }
@@ -6266,7 +6317,7 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 30 }
+                                                    "0": { "Value": 0 }
                                                 }
                                             }
                                         }
@@ -6350,9 +6401,10 @@
                     "BurstPeriodMinTimeMS": 250,
                     "BurstPeriodMaxTimeMS": 250,
                     "CooldownTimeMS": 0,
+                    "ActiveStatusEffectsIndex": 1,
                     "BaseDamagePerRound": 100,
                     "DamagePacketsPerShot": 0,
-                    "StatusEffectsExcludeTargetType": "All",
+                    "StatusEffectsExcludeTargetType": 0,
                     "FriendlyFireDamageScalar": 0,
                     "EntityTypesToSpawnOnImpact": {
                         "0": {
@@ -6382,7 +6434,48 @@
                     }
                 },
                 "C_Sob_NukeEmitter_Weapon_Self": {
-                    "BaseDamagePerRound": 0
+                    "BaseDamagePerRound": 1,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
+                    "RateOfFire": 1,
+                    "NumberOfBursts": 1,
+                    "ActiveStatusEffectsIndex": 1,
+                    "ReloadTimeMS": 1000,
+                    "CooldownTimeMS": 0,
+                    "AreaOfEffectRadius": 42000,
+                    "FriendlyFireDamageScalar": 1,
+                    "StatusEffectsExcludeTargetType": 0,
+                    "StatusEffectsSets": {
+                        "0": {
+                            "StatusEffects": [ "EmitterDeath_StatusEffect" ] // i need that no touchy!
+
+                        }
+                    }
+                }
+            }
+        },
+        "EmitterDeath_StatusEffect": {
+            "StatusEffectAttributes": {
+                "Duration": 15,
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": "Carrier",
+                        "UseAsPrefix": false,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Attribute": "PowerShunt_HeatThreshold",
+                                "Value": -10
+                            }
+                        }
+                    }
+                },
+                "Modifiers": {
+                    "0": {
+                        "HealthOverTimeAttributes": {
+                            "Amount": 0
+                        }
+                    }
                 }
             }
         },
@@ -6649,7 +6742,7 @@
             "UnitAttributes": {
                 "ExperienceValue": 250,
                 "PopCapCost": 0,
-                "MaxHealth": 750,
+                "MaxHealth": 600,
                 "ContactRadius": 400,
                 "SensorRadius": 270,
                 "PriorityAsTarget": -700
@@ -6759,10 +6852,10 @@
         "K_ExplodingSkimmer_MP": {
             "UnitAttributes": {
                 "ExcludeFromUnitStats": false,
-                "Resource1Cost": 120,
+                "Resource1Cost": 100,
                 "MaxHealth": 2000,
                 "Armour": 0,
-                "ProductionTime": 70,
+                "ProductionTime": 60,
                 "PopCapCost": 2
             },
             "AbilityAttributes": {
@@ -7287,7 +7380,7 @@
             "UnitAttributes": {
                 "Resource1Cost": 200,
                 "Resource2Cost": 30,
-                "MaxHealth": 1700,
+                "MaxHealth": 1500,
                 "PriorityAsTarget": -250,
                 "FireRateDisplay": 3
             },
@@ -7932,7 +8025,7 @@
                 "Resource1Cost": 480,
                 "Resource2Cost": 50,
                 "ProductionTime": 40,
-                "MaxHealth": 2700,
+                "MaxHealth": 2900,
                 "Armour": 5,
                 "PopCapCost": 5,
                 "PriorityAsTarget": -10
@@ -7944,9 +8037,14 @@
                     "AccelerationTime": 0.9
                 }
             },
+            "AbilityAttributes": {
+                "Ability_C_SupportCruiser_AA": {
+                    "RequiredResearch": []
+                }
+            },
             "WeaponAttributes": {
                 "C_SupportCruiser_Weapon_Repair_Small_MP": {
-                    "RateOfFire": 7,
+                    "RateOfFire": 6,
                     "OutputDPS": true,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesShort": {
@@ -7961,7 +8059,7 @@
                     "BurstPeriodMaxTimeMS": 300,
                     "CooldownTimeMS": 0,
                     "WindUpTimeMS": 50,
-                    "RateOfFire": 1,
+                    "RateOfFire": 0,
                     "ReloadTimeMS": 5000,
                     "AreaOfEffectRadius": 60,
                     "RangeAttributesShort": {
@@ -8018,7 +8116,7 @@
             }
         },
         // SOBAN SUPPORT CRUISER
-        "C_Sob_SupportCruiser_MP": {
+        "C_Sob_SupportCruiser_MP": { //goodbye my child, we will miss you, but your brother has better makeup
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
@@ -8226,7 +8324,22 @@
                 "LocalizedResearchTitleStringID": "SUPPORT CRUISER ANTI-GROUND",
                 "LocalizedLongDescriptionStringID": "Enables anti-ground capabilities.",
                 "Resource1Cost": 450,
-                "Resource2Cost": 250
+                "Resource2Cost": 250,
+                "UnitTypeBuffs": {
+                    "0": {
+                        "UnitClass": -1,
+                        "UseAsPrefix": false,
+                        "UnitType": "C_SupportCruiser_MP",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            }
+                        }
+                    }
+                }
             }
         },
         "Research_Buff_S_SupportCruiser_AA": {
@@ -8234,7 +8347,22 @@
                 "LocalizedResearchTitleStringID": "SUPPORT CRUISER ANTI-GROUND",
                 "LocalizedLongDescriptionStringID": "Enables anti-ground capabilities.",
                 "Resource1Cost": 450,
-                "Resource2Cost": 250
+                "Resource2Cost": 250,
+                "UnitTypeBuffs": {
+                    "0": {
+                        "UnitClass": -1,
+                        "UseAsPrefix": false,
+                        "UnitType": "C_SupportCruiser_MP",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            }
+                        }
+                    }
+                }
             }
         },
 
@@ -8537,7 +8665,7 @@
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
-                                "Mode": "AddPercent", //fraking work already you annoying werid thing FIXME
+                                "Mode": "AddPercent", //fraking work already you annoying werid thing 
                                 "Value": -50 //that suppose to add -5 to 15... eeeeh??? maybe it adds -7.5 who fraking knows but it defenetly dose less damage
                             },
                             "1": {
@@ -9538,7 +9666,7 @@
         "C_Escort_MP": {
             "UnitAttributes": {
                 "AggroRange": 1300,
-                "MaxHealth": 440,
+                "MaxHealth": 470,
                 "Armour": 4,
                 "ProductionTime": 12,
                 "PriorityAsTarget": 2
@@ -9551,7 +9679,10 @@
                     "ActiveCombatApproachMode": "Snipe"
                 },
                 "Dynamics": {
-                    "MaxSpeed": 90
+                    "MaxSpeed": 90,
+                    "MaxSpeedTurnRadius": 60,
+                    "BrakingTime": 0.7,
+                    "AccelerationTime": 0.7
                 }
             },
             "AbilityAttributes": {
@@ -9730,7 +9861,7 @@
         // SOBAN LAV
         "C_Sob_Escort_MP": {
             "UnitAttributes": {
-                "MaxHealth": 440,
+                "MaxHealth": 470,
                 "Armour": 4,
                 "ProductionTime": 12,
                 "PriorityAsTarget": 2
@@ -9743,7 +9874,10 @@
                     "ActiveCombatApproachMode": "Snipe"
                 },
                 "Dynamics": {
-                    "MaxSpeed": 90
+                    "MaxSpeed": 90,
+                    "MaxSpeedTurnRadius": 60,
+                    "BrakingTime": 0.7,
+                    "AccelerationTime": 0.7
                 }
             },
             "AbilityAttributes": {
@@ -9913,7 +10047,7 @@
                 "LocalizedResearchTitleStringID": "LONG-RANGE ASSAULT VEHICLE FABRICATION",
                 "LocalizedLongDescriptionStringID": "Fast-moving Strike vehicle. Effective at pew pewing targets from long range. More accurate if target is far from it.\n\n[ff0000]Imma pew pew pew you from that dune.",
                 "Resource1Cost": 350,
-                "ResearchTime": 35
+                "ResearchTime": 37
             }
         },
 
@@ -10203,8 +10337,8 @@
         // COALITION LAV ASSAULT PACK
         "Research_Buff_C_Escort": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 150,
-                "Resource2Cost": 180
+                "Resource1Cost": 200,
+                "Resource2Cost": 100
 
             }
         },
@@ -10212,16 +10346,17 @@
         ///SOBAN LAV ASSAULT PACK
         "Research_Buff_S_Escort": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 150,
-                "Resource2Cost": 180
+                "Resource1Cost": 200,
+                "Resource2Cost": 100
             }
         },
 
         // COALITION LAV DAMAGE UPGRADES
         "Research_Buff_C_Escort_Damage01": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 200,
-                "ResearchTime": 25,
+                "Resource1Cost": 150,
+                "Resource2Cost": 25,
+                "ResearchTime": 15,
                 "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
                 "UnitTypeBuffs": {
                     "0": {
@@ -10236,7 +10371,8 @@
         "Research_Buff_C_Escort_Damage02": {
             "ResearchItemAttributes": {
                 "Resource1Cost": 200,
-                "ResearchTime": 45,
+                "Resource2Cost": 75,
+                "ResearchTime": 15,
                 "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
                 "UnitTypeBuffs": {
                     "0": {
@@ -10252,8 +10388,9 @@
         // SOBAN LAV DAMAGE UPGRADES
         "Research_Buff_S_Escort_Damage01": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 200,
-                "ResearchTime": 25,
+                "Resource1Cost": 150,
+                "Resource2Cost": 25,
+                "ResearchTime": 15,
                 "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
                 "UnitTypeBuffs": {
                     "0": {
@@ -10274,8 +10411,9 @@
         "Research_Buff_S_Escort_Damage02": {
             "ResearchItemAttributes": {
                 "Resource1Cost": 200,
+                "Resource2Cost": 75,
+                "ResearchTime": 15,
                 "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
-                "ResearchTime": 45,
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
@@ -10307,8 +10445,9 @@
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "SANDSIEGER DAMAGE LEVEL 1",
                 "LocalizedLongDescriptionStringID": "Improves the Sandsieger's' offensive capabilities.\n\n[84a1e8]Increases weapon damage by 50.",
-                "Resource1Cost": 200,
-                "ResearchTime": 25,
+                "Resource1Cost": 150,
+                "Resource2Cost": 25,
+                "ResearchTime": 15,
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
@@ -10330,7 +10469,8 @@
                 "LocalizedResearchTitleStringID": "SANDSIEGER DAMAGE LEVEL 2",
                 "LocalizedLongDescriptionStringID": "Improves the Sandsieger's' offensive capabilities.\n\n[84a1e8]Increases weapon damage by 50.",
                 "Resource1Cost": 200,
-                "ResearchTime": 45,
+                "Resource2Cost": 75,
+                "ResearchTime": 15,
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
@@ -10351,7 +10491,8 @@
         // COALITION LAV ARMOR UPGRADES
         "Research_Buff_C_Escort_VehicleArmor01": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 350,
+                "Resource1Cost": 300,
+                "Resource2Cost": 100,
                 "LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
                 "UnitTypeBuffs": {
                     "0": {
@@ -10369,7 +10510,7 @@
         },
         "Research_Buff_C_Escort_VehicleArmor02": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 350,
+                "Resource1Cost": 300,
                 "Resource2Cost": 175,
                 "LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
                 "UnitTypeBuffs": {
@@ -10390,7 +10531,7 @@
         // SOBAN LAV ARMOR UPGRADES
         "Research_Buff_S_Escort_VehicleArmor01": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 350,
+                "Resource1Cost": 300,
                 "Resource2Cost": 100,
                 "LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
                 "UnitTypeBuffs": {
@@ -10419,7 +10560,7 @@
         },
         "Research_Buff_S_Escort_VehicleArmor02": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 350,
+                "Resource1Cost": 300,
                 "Resource2Cost": 175,
                 "LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
                 "UnitTypeBuffs": {
@@ -10539,7 +10680,7 @@
                 "ToggledIconName": "Icon-Command-RailGunFire",
                 "LocalizedTitleStringID": "SWAP TO BLINDING LAZOR",
                 "LocalizedShortDescriptionStringID": "TOGGLE",
-                "LocalizedLongDescriptionStringID": "Swaps main weapon for military grade lazor designed to blind target into oblivion, rendering them unable to fire and recive orders for short duration, untill other hit...",
+                "LocalizedLongDescriptionStringID": "Swaps main weapon for military grade lazor designed to blind target into oblivion, rendering them unable to fire and see anything around them for short duration, untill other hit...\n\n[84a1e8]There is no geneva suggestions on kharak.",
                 "LocalizedToggledTitleStringID": "SWAP TO MAGACCELERATED (MAYBE) RAILGUN",
                 "LocalizedToggledShortDescriptionStringID": "TOGGLE",
                 "LocalizedToggledLongDescriptionStringID": "Swaps domination lazor for main duity railgun, in case you dont want to make pets from enemy units anymore..."
@@ -10549,12 +10690,9 @@
         },
         "MarkTarget_StatusEffect": {
             "StatusEffectAttributes": {
-                "Duration": 2,
+                "Duration": 3,
                 "Modifiers": {
                     "0": {
-                        "ModifierType": "DisableAbilities"
-                    },
-                    "1": {
                         "ModifierType": "DisableAllWeapons"
                     }
                 },
@@ -10570,6 +10708,16 @@
                                 "Attribute": 131076,
                                 "Mode": "AddPercent",
                                 "Value": 20
+                            },
+                            "2": {
+                                "Attribute": "Unit_ContactRadius",
+                                "Mode": "Set",
+                                "Value": 0
+                            },
+                            "3": {
+                                "Attribute": "Unit_SensorRadius",
+                                "Mode": "Set",
+                                "Value": 0
                             }
                         }
                     }
@@ -10665,15 +10813,15 @@
             "WeaponAttributes": {
                 "C_Railgun_Weapon_G2G_MP": {
                     "NumberOfBursts": 1,
-                    "RateOfFire": 10,
+                    "RateOfFire": 100,
                     "BaseDamagePerRound": 50,
                     "DamagePacketsPerShot": 0,
                     "WindDownTimeMS": 50,
-                    "WindUpTimeMS": 50,
+                    "WindUpTimeMS": 1050,
                     "CooldownTimeMS": 2000,
-                    "ReloadTimeMS": 2000,
-                    "BurstPeriodMinTimeMS": 300,
-                    "BurstPeriodMaxTimeMS": 700,
+                    "ReloadTimeMS": 1400,
+                    "BurstPeriodMinTimeMS": 30,
+                    "BurstPeriodMaxTimeMS": 70,
                     "AreaOfEffectFalloffType": "Linear",
                     "AreaOfEffectRadius": 100,
                     "RangeAttributesShort": {
@@ -10898,10 +11046,12 @@
                 },
                 "C_Sob_Railgun_Weapon_G2G_MP": {
                     "NumberOfBursts": 1,
-                    "WindUpTimeMS": 100,
+                    "WindUpTimeMS": 600,
                     "WindDownTimeMS": 100,
                     "BaseDamagePerRound": 30,
                     "DamagePacketsPerShot": 0,
+                    "BurstPeriodMinTimeMS": 500,
+                    "BurstPeriodMaxTimeMS": 500,
                     "ReloadTimeMS": 100,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "AreaOfEffectRadius": 0,
@@ -11043,13 +11193,13 @@
         // GAALSIEN HEAVY RAILGUN
         "G_StarHullTank_MP": {
             "UnitAttributes": {
-                "Resource1Cost": 380,
-                "Resource2Cost": 110,
+                "Resource1Cost": 360,
+                "Resource2Cost": 100,
                 "MaxHealth": 1700,
                 "Armour": 11,
                 "ProductionTime": 20,
-                "PopCapCost": 4,
-                "ExperienceValue": 550,
+                "PopCapCost": 3,
+                "ExperienceValue": 650,
                 "PriorityAsTarget": 15,
                 "AggroRange": 1200,
                 "FireRateDisplay": 3
@@ -11290,13 +11440,13 @@
         // KHAANEPH HEAVY RAILGUN
         "K_HeavyRailgun_MP": {
             "UnitAttributes": {
-                "Resource1Cost": 380,
-                "Resource2Cost": 110,
+                "Resource1Cost": 360,
+                "Resource2Cost": 100,
                 "MaxHealth": 1700,
                 "Armour": 11,
                 "ProductionTime": 20,
-                "PopCapCost": 4,
-                "ExperienceValue": 550,
+                "PopCapCost": 3,
+                "ExperienceValue": 650,
                 "PriorityAsTarget": 15,
                 "AggroRange": 1200,
                 "FireRateDisplay": 3
@@ -11563,9 +11713,9 @@
         // GAALSIEN/KHAANEPH RANGED CALIBRATION UPGRADE
         "Research_Buff_G_RailGunScope": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 200,
-                "Resource2Cost": 250,
-                "ResearchTime": 55,
+                "Resource1Cost": 300,
+                "Resource2Cost": 100,
+                "ResearchTime": 50,
                 "LocalizedLongDescriptionStringID": "Heavy Railguns gain the RANGED CALIBRATION ability - Increasing fire rate at the cost of range.\n\n[84a1e8]Fire rate greatly increased.\nRange reduced to 700."
             }
         },
@@ -11574,7 +11724,7 @@
         "Research_Buff_G_RailGunStun": {
             "ResearchItemAttributes": {
                 "Resource1Cost": 400,
-                "Resource2Cost": 100,
+                "Resource2Cost": 150,
                 "ResearchTime": 35
             }
         },
@@ -11952,6 +12102,8 @@
         // GAALSIEN/KHAANEPH RAILGUN ARMOR UPGRADES
         "Research_Buff_G_RailGunUnits_Armor1": {
             "ResearchItemAttributes": {
+                "Resource1Cost": 150,
+                "Resource2Cost": 100,
                 "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
                 "UnitTypeBuffs": {
                     "0": {
@@ -12001,8 +12153,8 @@
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "RAILGUN ARMOR LEVEL 1: 2 ELECTRIC BOOGALOO",
                 "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun and Assault Railgun.\n\n[84a1e8]Same thing 2 times in a row?",
-                "Resource1Cost": 250,
-                "Resource2Cost": 175,
+                "Resource1Cost": 200,
+                "Resource2Cost": 150,
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": { // G_StarHull_Upgrade01_MP
@@ -12031,7 +12183,7 @@
         },
         "Research_Buff_G_RailGunUnits_Armor3": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 300,
+                "Resource1Cost": 250,
                 "Resource2Cost": 250,
                 "LocalizedResearchTitleStringID": "RAILGUN ARMOR LEVEL 1: 3 UNWANTED SEQUEL",
                 "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.\n\n[84a1e8]Same thing? But costs even more? What a scam!",
@@ -12159,8 +12311,10 @@
             },
             "UnitAttributes": {
                 "Resource1Cost": 300,
-                "Resource2Cost": 85,
+                "Resource2Cost": 75,
                 "Armour": 10,
+                "MaxHealth": 1400,
+                "ProductionTime": 20,
                 "PriorityAsTarget": -10,
                 "AggroRange": 1001,
                 "UnitPositionReaggroConditions": "TargetWithinAggroRange"
@@ -12263,10 +12417,12 @@
         "G_Catamaran_Upgrade01_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 350,
-                "Resource2Cost": 90,
-                "ProductionTime": 24,
+                "Resource2Cost": 75,
+                "ProductionTime": 22,
                 "Armour": 0,
-                "PriorityAsTarget": -10
+                "PriorityAsTarget": -10,
+                "SensorRadius": 1600,
+                "ContactRadius": 1800
             },
             "AbilityAttributes": {
 
@@ -12432,10 +12588,12 @@
         "K_MissileShip_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 350,
-                "Resource2Cost": 90,
-                "ProductionTime": 24,
+                "Resource2Cost": 75,
+                "ProductionTime": 22,
                 "Armour": 0,
-                "PriorityAsTarget": -10
+                "PriorityAsTarget": -10,
+                "SensorRadius": 1600,
+                "ContactRadius": 1800
             },
             "AbilityAttributes": {
                 "Ability_G_MissileShipRegen": {
@@ -12594,7 +12752,7 @@
         // GAALSIEN/KHAANEPH MISSILE SHIP FABRICATION
         "Tier_2_G_Catamaran_AA": {
             "ResearchItemAttributes": {
-                "ResearchTime": 45
+                "ResearchTime": 35
             }
         },
 
@@ -12708,8 +12866,10 @@
                 "MaxHealth": 490,
                 "Armour": 0,
                 "Resource1Cost": 240,
-                "Resource2Cost": 90,
-                "ProductionTime": 28
+                "Resource2Cost": 75,
+                "ProductionTime": 26,
+                "SensorRadius": 2200,
+                "ContactRadius": 2400
             },
             "UnitMovementAttributes": {
                 "Combat": {
@@ -12907,8 +13067,8 @@
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 250,
-                "Resource2Cost": 100,
-                "ProductionTime": 12,
+                "Resource2Cost": 80,
+                "ProductionTime": 11,
                 "MaxHealth": 500,
                 "Armour": 3,
                 "FireRateDisplay": 4
@@ -13094,8 +13254,8 @@
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 250,
-                "Resource2Cost": 100,
-                "ProductionTime": 12,
+                "Resource2Cost": 80,
+                "ProductionTime": 11,
                 "MaxHealth": 500,
                 "Armour": 2,
                 "FireRateDisplay": 4
@@ -13216,7 +13376,7 @@
                 "LocalizedShortDescriptionStringID": "ARMOR UPGRADE",
                 "LocalizedLongDescriptionStringID": "Increases armor by 3 and hull integrety by 550",
                 "Resource1Cost": 200,
-                "Resource2Cost": 120,
+                "Resource2Cost": 150,
                 "ResearchTime": 40,
                 "UnitTypeBuffs": {
                     "0": {
@@ -13334,9 +13494,10 @@
                 "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 450,
                 "Resource2Cost": 160,
-                "MaxHealth": 1300,
-                "Armour": 10,
-                "PopCapCost": 4
+                "MaxHealth": 1250,
+                "Armour": 6,
+                "PopCapCost": 4,
+                "ProductionTime": 37
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -13452,6 +13613,7 @@
                 "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 2500,
                 "Armour": 15,
+                "Resource1Cost": 340,
                 "Resource2Cost": 140,
                 "PopCapCost": 3,
                 "ProductionTime": 22,
@@ -13638,6 +13800,7 @@
                 "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 2500,
                 "Armour": 15,
+                "Resource1Cost": 340,
                 "Resource2Cost": 140,
                 "PopCapCost": 3,
                 "ProductionTime": 22,
@@ -13887,8 +14050,8 @@
             },
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
-                "Resource1Cost": 500,
-                "Resource2Cost": 100,
+                "Resource1Cost": 400,
+                "Resource2Cost": 120,
                 "MaxHealth": 1250,
                 "Armour": 9,
                 "PopCapCost": 4,
@@ -13920,10 +14083,10 @@
         "G_BattleCruiser_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 550,
-                "Resource2Cost": 260,
+                "Resource2Cost": 240,
                 "MaxHealth": 1000,
                 "PopCapCost": 6,
-                "ProductionTime": 60,
+                "ProductionTime": 57,
                 "Armour": 5
             },
             "ExperienceAttributes": {
@@ -14012,8 +14175,18 @@
                 }
             },
             "WeaponAttributes": {
-
-
+                /*"G_BattleCruiser_Weapon_MovemenBonus_MP": { // i need this weapon id
+                    "StatusEffectsTargetAlignment": "Friend",
+                    "DamageType": "Heal",
+                    "BaseDamagePerRound": 75,
+                    "AreaOfEffectRadius": 500,
+                    "ProjectileEntityTypeToSpawn": "C_HAC_Smoke_SceneEntity_MP",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "ArmorBonus_StatusEffect" ] }
+                    },
+                    "ReloadTimeMS": 3500,
+                    "StatusEffectsExcludeTargetType": "Air"
+                },*/
                 "G_Battlecruiser_Weapon_G2G_MP": {
                     //"ProjectileEntityTypeToSpawn": "C_Battlecruiser_TacticalMissile_ProjectileAssetContainer_MP",
                     "BaseDamagePerRound": 75,
@@ -14153,10 +14326,10 @@
         "C_Sob_AssaultCruiser_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 550,
-                "Resource2Cost": 260,
+                "Resource2Cost": 280,
                 "MaxHealth": 1000,
                 "PopCapCost": 6,
-                "ProductionTime": 60,
+                "ProductionTime": 57,
                 "Armour": 5
             },
             "ExperienceAttributes": {
@@ -14549,8 +14722,8 @@
                         }
                     },
                     "RangeAttributesLong": {
-                        "Distance": 7500
-
+                        "Distance": 7500,
+                        "Accuracy": 50
                     },
                     "RangeAttributesShort": {
                         "Remove": true
@@ -14791,7 +14964,8 @@
                         }
                     },
                     "RangeAttributesLong": {
-                        "Distance": 7500
+                        "Distance": 7500,
+                        "Accuracy": 50
                     }
                 },
                 "G_HonorGuard_Weapon_G2A_MP": {
@@ -15336,7 +15510,6 @@
             "AbilityAttributes": {
                 "Ability_C_ToggleAutoFire": {
                     "CooldownTimeSecs": 90,
-                    "SharedCooldownChannel": 1,
                     "ApplyStatusEffect": {
                         "ToggleAutoFire_StatusEffect": {
                             "BuffsToApplyToTarget": {
